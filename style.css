@@ -1,0 +1,141 @@
+    body{
+font-family: Posterama, sans-serif;
+   background-color: #7B68EE;
+   color: #333;
+   line-height: 1.6;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+    background: #7FFFD4;
+    color: #000000;
+    padding: 10px 0;
+    text-align: center;
+        }
+
+header a {
+    color: #000000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+img.fig {
+    float: left;
+    padding-right: 20px;
+    width: 100%; 
+    max-width: 450px; 
+    height: auto; 
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    background: #191970;
+    color: #FFFFFF;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 1px solid green	;
+}
+
+.burger-checkbox {
+position: absolute;
+visibility: hidden;
+}
+.burger {
+cursor: pointer;
+display: block;
+position: relative;
+border: none;
+background: transparent;
+width: 40px;
+height: 26px;
+margin: 30px auto;
+}
+.burger::before,
+.burger::after {
+content: '';
+left: 0;
+position: absolute;
+display: block;
+width: 100%;
+height: 4px;
+border-radius: 10px;
+background: #000;
+}
+.burger::before {
+top: 0;
+box-shadow: 0 11px 0 #000;
+transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+}
+.burger::after {
+bottom: 0;
+transition: bottom .3s .15s, transform .3s;
+}
+.burger-checkbox:checked + .burger::before {
+top: 11px;
+transform: rotate(45deg);
+box-shadow: 0 6px 0 rgba(0,0,0,0);
+transition: box-shadow .15s, top .3s, transform .3s .15s;
+}
+.burger-checkbox:checked + .burger::after {
+bottom: 11px;
+transform: rotate(-45deg);
+transition: bottom .3s, transform .3s .15s;
+}
+
+.dropbtn {
+background-color: #4CAF50;
+color: white;
+padding: 16px;
+font-size: 16px;
+border: none;
+cursor: pointer;
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
